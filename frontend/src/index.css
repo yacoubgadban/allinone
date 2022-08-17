@@ -17,6 +17,7 @@ header{
   padding:15px
 }
 header a{
-  color:#ffffff
+  color:#ffffff;
+  flex-direction: none;
 }
 
