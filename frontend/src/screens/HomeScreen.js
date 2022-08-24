@@ -3,7 +3,8 @@ import axios from 'axios';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Products from "../components/Products";
-
+import { Helmet } from "react-helmet-async";
+import LoadingBox from '../components/LoadingBox'
 
 
 const reducer=(state , action)=>{
@@ -38,10 +39,13 @@ function HomeScreen(){
 
     return (
       <div>
+        <Helmet>
+          <title>AllInOne</title>
+        </Helmet>
         <h1>Featured Products</h1>
         <div className="products">
           {loading ? 
-            <div>Loading...</div>
+            <LoadingBox />
           : error ? 
             <div>{error}</div>
            : 
